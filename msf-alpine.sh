@@ -8,8 +8,7 @@
 echo "*** METASPLOIT INSTALL FOR ALPINE LINUX ***"
 echo 
 echo "==> Account configuration."
-echo "Username : "
-read USER
+export USER="msfuser"
 adduser $USER
 echo 
 echo "The user $USER will be automatically added among sudoers with all permissions"
@@ -47,9 +46,9 @@ done
 
 echo " ==> Database configuration "
 echo
-echo " DB User : "; read DBUSER
-echo " DB Password : "; read DBPASS
-echo " DB Name : "; read DBNAME
+export DBUSER="msfdbuser"
+export DBPASS="dbpass"
+export DBNAME="msf"
 
 echo "Those are the settings you choosed: "
 echo "DBUser: $DBUSER"
